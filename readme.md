@@ -43,6 +43,10 @@ fn app(cx: Scope) -> Element {
 - https://www.runoob.com/html/html5-intro.html
 - https://zhuanlan.zhihu.com/p/459873347
 
+# css基础
+- https://www.runoob.com/css/css-tutorial.html
+- https://www.cainiaojc.com/css3/css3-tutorial.html
+
 # jsx语法基础
 - jsx是一种JavaScript的语法扩展（eXtension），也在很多地方称之为JavaScript XML，因为看起来就是一段XML语法；
 - 它用于描述我们的UI界面，并且其完成可以和JavaScript融合在一起使用；

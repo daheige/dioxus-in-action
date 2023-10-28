@@ -6,5 +6,7 @@ members = [
     "custom-html",
     "rsx-demo",
     "page-design",
-    "link-css"
+    "link-css",
+    "page-render",
+    "props-render"
 ]
