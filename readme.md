@@ -11,6 +11,9 @@ Dioxus 是一款用于构建跨平台用户界面的框架。本实战案例基�
 - https://github.com/dioxuslabs/dioxus
 - https://github.com/DioxusLabs/dioxus/blob/master/notes/README/ZH_CN.md
 
+# examples
+https://github.com/DioxusLabs/dioxus/tree/master/examples
+
 # 使用手册
 - https://dioxuslabs.com/learn/0.4/
 - https://www.dioxus.cn/docs/quick-start/rsx
