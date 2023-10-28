@@ -3,5 +3,8 @@ resolver = "2"
 members = [
     "dioxus-demo",
     "window-ctrl",
-    "custom-html"
+    "custom-html",
+    "rsx-demo",
+    "page-design",
+    "link-css"
 ]
