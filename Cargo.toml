@@ -8,5 +8,6 @@ members = [
     "page-design",
     "link-css",
     "page-render",
-    "props-render"
+    "props-render",
+    "iter-render"
 ]
