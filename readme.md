@@ -1,6 +1,12 @@
 # dioxus in action
 Dioxus 是一款用于构建跨平台用户界面的框架。
 
+# 多平台支持
+- 网页应用（使用 WASM 构建）
+- 桌面应用（使用 Wry 构建）
+- 移动应用（使用 Wry 构建）
+- 终端应用（使用 Rink 构建）
+
 # dioxus官网
 - https://github.com/dioxuslabs/dioxus
 - https://github.com/DioxusLabs/dioxus/blob/master/notes/README/ZH_CN.md
@@ -15,12 +21,6 @@ Dioxus 是一款用于构建跨平台用户界面的框架。
 - 强大状态管理系统以及易用的 Hooks 设计。
 - 桌面应用原生支持，提供部分常用 API 可调用。
 - 简洁的 RSX 界面声明格式，比 HTML 更加易读。
-
-# 多平台支持
-- 网页应用（使用 WASM 构建）
-- 桌面应用（使用 Wry 构建）
-- 移动应用（使用 Wry 构建）
-- 终端应用（使用 Rink 构建）
 
 # jsx语法基础
 - jsx是一种JavaScript的语法扩展（eXtension），也在很多地方称之为JavaScript XML，因为看起来就是一段XML语法；
