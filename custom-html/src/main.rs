@@ -11,12 +11,20 @@ fn main() {
     // 这里的主线程会被应用程序的事件循环所阻塞，直到触发整个程序的退出
     // dioxus_desktop::launch(app); // 简单做法
 
-    // 自定义配置
-    let config = Config::new();
+    // 自定义配置,设置head样式style
+    let config = Config::new().with_custom_head(
+        r#"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>body { background-color: green; }</style>
+        "#
+        .into(),
+    );
+
     // 创建窗口并设置窗口标题和窗口大小
     let window = WindowBuilder::new()
         .with_title("dioxus demo")
         .with_inner_size(LogicalSize::new(640, 640));
+
     dioxus_desktop::launch_cfg(app, config.with_window(window));
 }
 

@@ -23,10 +23,22 @@ fn main() {
 fn app(cx: Scope) -> Element {
     // rsx语法类似于jsx语法
     // RSX 会自动被转换为 HTML 结构，相对来说 RSX 更容易被表达和阅读
+    // 获取window
+    let win = dioxus_desktop::use_window(cx);
+    // win.set_decorations(false); // 设置窗口无边框
+
     cx.render(rsx!(
         div {
+            a {
+                class: "close",
+                onmousedown: |e| { e.cancel_bubble(); },
+                onclick: move |_| { win.close() },
+                "点击关闭窗口"
+            }
+        },
+        div {
             "style": "text-align:center;",
-            "Hello, world!"
+            "Hello, world!",
         },
         p {
             "hello,dioxus"
