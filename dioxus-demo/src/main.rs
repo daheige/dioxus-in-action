@@ -2,11 +2,20 @@
 
 use dioxus::prelude::*;
 
+// 用于自定义窗口
+use dioxus_desktop::{Config, WindowBuilder};
+
 fn main() {
     println!("Hello, world!");
     // 在 main 函数中，通过 lanuch 函数运行整个程序，并传入根组件app
     // 这里的主线程会被应用程序的事件循环所阻塞，直到触发整个程序的退出
-    dioxus_desktop::launch(app);
+    // dioxus_desktop::launch(app); // 简单做法
+
+    // 自定义配置
+    let config = Config::new();
+    // 创建窗口并设置窗口标题
+    let window = WindowBuilder::new().with_title("dioxus demo");
+    dioxus_desktop::launch_cfg(app,config.with_window(window));
 }
 
 fn app(cx: Scope) -> Element {
