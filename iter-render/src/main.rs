@@ -20,7 +20,9 @@ fn main() {
     dioxus_desktop::launch_cfg(root, config.with_window(window));
 }
 
+// PostProps自定义组件
 // Props 组件条件渲染
+// 通过Props属性标记
 #[derive(Props, PartialEq)]
 struct PostProps {
     title: String,

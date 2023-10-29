@@ -75,6 +75,17 @@ fn root(cx: Scope) -> Element {
         p {
             "开始遍历文章列表"
         },
-        ele
+        ele,
+        input {
+            oninput:|event| {
+                println!("新的内容被输入来:{:?}",event);
+            }
+        },
+        button {
+            onclick:|event|{
+                println!("按钮被点击了:{:?}",event);
+            },
+            "点击我"
+        }
     })
 }

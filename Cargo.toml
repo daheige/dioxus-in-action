@@ -10,5 +10,6 @@ members = [
     "page-render",
     "props-render",
     "iter-render",
-    "special-attrs"
+    "special-attrs",
+    "hooks-demo"
 ]

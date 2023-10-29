@@ -24,7 +24,7 @@ fn app(cx: Scope) -> Element {
     // rsx语法类似于jsx语法
     // RSX 会自动被转换为 HTML 结构，相对来说 RSX 更容易被表达和阅读
     cx.render(rsx!(
-        div{
+        div {
             // 作用于整个div内容居中
             "style":"text-align:center;",
             h1{
@@ -41,7 +41,7 @@ fn app(cx: Scope) -> Element {
             }
         },
         // 自定义data属性 转换为<div data-count="10">hello,world</div>
-        div{
+        div {
             "data-count":"10",
             "hello,world"
         }
