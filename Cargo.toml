@@ -9,5 +9,6 @@ members = [
     "link-css",
     "page-render",
     "props-render",
-    "iter-render"
+    "iter-render",
+    "special-attrs"
 ]

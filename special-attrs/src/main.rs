@@ -15,11 +15,12 @@ fn main() {
     let config = Config::new();
     // 创建窗口并设置窗口标题和窗口大小
     let window = WindowBuilder::new()
-        .with_title("rsx demo")
+        .with_title("special-attrs")
         .with_inner_size(LogicalSize::new(640, 640));
     dioxus_desktop::launch_cfg(root, config.with_window(window));
 }
 
+// 自定义post组件
 // Props 组件条件渲染
 #[derive(Props, PartialEq)]
 struct PostProps {
@@ -29,15 +30,16 @@ struct PostProps {
 
 fn Post(cx: Scope<PostProps>) -> Element {
     let css_style =
-        r#".title { font-size: 18px; text-align: center;} .content{width:100%;text-align:left;}"#;
+        r#".title { font-size: 18px; text-align: left;} .content{width:100%;text-align:left;}"#;
     cx.render(rsx!(
         style {
             "{css_style}"
         },
         div {
             class: "card-content",
-            h1 {"class":"title","{cx.props.title}" },
-            p {"class":"content","{cx.props.content}" }
+            hr {},
+            h1 {"class":"title","文章：{cx.props.title}" },
+            p {"class":"content","内容：{cx.props.content}" }
         }
     ))
 }
@@ -60,31 +62,19 @@ fn root(cx: Scope) -> Element {
         }
     });
 
-    let names = vec!["jim", "bob", "jane", "doe", "jake"];
-
-    // 采用filter进行过滤，然后采用map进行逐个遍历
-    // 对于li每个项，采用来自定义属性data-key来区分
-    let name_ele = names
-        .iter()
-        .filter(|name| {
-            name.starts_with("j") // 过滤操作
-        })
-        .map(|name| rsx!(li{"data-key":"{name}","current name:{name}"}));
-
+    let content = include_str!("../assets/app.html");
     cx.render(rsx! {
-        link {
-            rel: "stylesheet",
-            href: "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+         // 引入本地css文件
+        style {
+            include_str!("../assets/app.css")
         },
         div {
-            "class": "container",
-            ele,
-            p {
-                "filter for names"
-            },
-            ul {
-                name_ele
-            }
-        }
+            "class":"app",
+            dangerous_inner_html: "{content}",
+        },
+        p {
+            "开始遍历文章列表"
+        },
+        ele
     })
 }
