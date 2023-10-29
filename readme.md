@@ -39,6 +39,9 @@ fn app(cx: Scope) -> Element {
 <div>Hello, world!</div>
 ```
 
+# dioxus router
+https://crates.io/crates/dioxus-router
+
 # html5基础
 - https://www.runoob.com/html/html5-intro.html
 - https://zhuanlan.zhihu.com/p/459873347
