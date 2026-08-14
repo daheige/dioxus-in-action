@@ -11,7 +11,7 @@ fn main() {
     // 这里的主线程会被应用程序的事件循环所阻塞，直到触发整个程序的退出
     // dioxus_desktop::launch(app); // 简单做法
 
-    // 自定义配置,设置head样式style
+    // 自定义配置header头，并设置head样式style
     let config = Config::new().with_custom_head(
         r#"
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,10 +55,10 @@ fn app(cx: Scope) -> Element {
         },
         // 遍历
         p {
-            "开始遍历"
+            "开始遍历0-4"
         },
         div {
-            (0..3).map(|i|rsx!{
+            (0..5).map(|i|rsx!{
                 div{
                     "current i = {i}"
                 }

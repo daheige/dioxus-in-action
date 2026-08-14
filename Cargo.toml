@@ -1,5 +1,15 @@
+[workspace.package]
+version = "0.1.1"
+edition = "2024"
+authors = ["daheige"]
+description = "rust dioxus in action"
+keywords = ["dioxus", "rust-dioxus", "rs-dioxus","dioxus-web"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/daheige/dioxus-in-action"
+
 [workspace]
-resolver = "2"
+resolver = "3"
 members = [
     "dioxus-demo",
     "window-ctrl",
@@ -13,3 +23,8 @@ members = [
     "special-attrs",
     "hooks-demo"
 ]
+
+# 项目依赖
+[workspace.dependencies]
+dioxus = "0.4.0"
+dioxus-desktop = "0.4.0"

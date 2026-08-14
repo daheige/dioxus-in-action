@@ -13,6 +13,7 @@ fn main() {
 
     // 自定义配置
     let config = Config::new();
+
     // 创建窗口并设置窗口标题和窗口大小
     let window = WindowBuilder::new()
         .with_title("hooks demo")
