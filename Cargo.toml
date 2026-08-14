@@ -26,5 +26,4 @@ members = [
 
 # 项目依赖
 [workspace.dependencies]
-dioxus = "0.4.0"
-dioxus-desktop = "0.4.0"
+dioxus = "0.7.10"
