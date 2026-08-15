@@ -68,6 +68,11 @@ dioxus-in-action/
 ---
 
 ## 快速开始
+安装 dioxus-cli
+```shell
+rustup target add wasm32-unknown-unknown
+cargo install dioxus-cli --locked
+```
 
 ```bash
 # 克隆仓库
